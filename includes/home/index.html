@@ -1,0 +1,207 @@
+<style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto' !important;
+    }
+
+    #personaTbl {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #personaTbl td,
+    #personaTbl th {
+        border: 1px solid #ddd;
+        padding: 8px;
+
+    }
+
+   
+
+    #personaTbl tr:hover {
+        background-color: #ddd;
+    }
+
+    #personaTbl th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #f9fafb;
+        color: black;
+    }
+
+    .newPersona {
+        background-color: #21ba45;
+        color: white;
+    }
+
+    .titleLinkedIn {
+        margin-left: 5%;
+    }*/
+    .center-screen {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        /* background-color: #D3D3D3; */
+
+
+        margin: 0;
+        outline: 0;
+        -webkit-appearance: none;
+
+        line-height: 1.21428571em;
+        padding: .67857143em 1em;
+        font-size: 1em;
+        background: #fff;
+        border: 1px solid rgba(34, 36, 38, .15);
+        color: rgba(0, 0, 0, .87);
+        border-radius: .28571429rem;
+        -webkit-box-shadow: 0 0 0 0 transparent inset;
+        box-shadow: 0 0 0 0 transparent inset;
+        -webkit-transition: color .1s ease, border-color .1s ease;
+        transition: color .1s ease, border-color .1s ease;
+
+
+    }
+
+    input[type=text] {
+        border: 1px solid #22242626;
+
+    }
+
+    label {
+        font-weight: 700;
+    }
+
+    input[type=text] {
+        display: block;
+        text-transform: none;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .threeColumn {
+        width: 48% !important;
+        float: left;
+        margin-right: 2%;
+
+
+    }
+
+    .disabled {
+        /* pointer-events: none; */
+        background: #595959;
+        opacity: 0.4;
+        /* pointer-events: none; */
+    }
+
+    /* #overlay {
+        position: fixed;
+        display: none;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        background: rgba(0, 0, 0, 0.5);
+    } */
+</style>
+<load-script src="'includes/home/controller.js'"
+             call-back="demo.callback" charset="utf-8"></load-script>
+<!-- <script type="application/javascript" src="includes/home/controller.js"></script> -->
+<script type="text/javascript-lazy">
+    alert("lazy loaded");
+</script>
+
+<div ng-controller="homeCtrl">
+    <div class="center-screen" id="myMenu">
+        <h1 style="padding: 2%; color: black;">Persona Information</h1>
+        <div style="padding: 2%">
+
+            <div class="threeColumn">
+                <label for="pipe_fullname" style=" color: black;">
+                    Fullname
+                </label>
+                <input type="text" id="persona_fullname" list="pipe_fullname">
+                <datalist id="pipe_fullname">
+                    <option value="https://developer.mozilla.org/">
+                    <option value="http://www.google.com/">
+                    <option value="http://www.microsoft.com/">
+                    <option value="https://www.mozilla.org/">
+                    <option value="http://w3.org/">
+                </datalist>
+            </div>
+            <div class="threeColumn">
+                <label for="pipe_fullname" style=" color: black;">
+                    Email
+                </label>
+
+                <input type="text" id="persona_email">
+            </div>
+            <div class="threeColumn">
+
+                <label for="pipe_fullname" style=" color: black;">
+                    Catch Hook Url
+                </label>
+                <input type="text" id="catch_hook_url">
+            </div>
+            <div class="threeColumn">
+
+
+
+                <label for="pipe_fullname" style=" color: black;">
+                    Fullname
+                </label>
+                <input type="text" id="pipe_fullname">
+            </div>
+
+
+            <button type="button" id="insertConnection" class="ui primary mini button"
+                style="float: right;margin: 2%;">INSERT</button>
+        </div>
+
+
+    </div>
+    <!-- class="disabled" -->
+
+
+
+    <div ng-disabled="true" style="margin: 5%;" id="overlay">
+        <h1 class="titleLinkedIn">LinkedIn Dashboard </h1>
+        <div style="margin-top: 2%;">
+            <a href="javascript:void(0)" class="waves-input-wrapper waves-button-input waves-effect newPersona"
+                onclick="openNav()" style="padding: 1%;margin: 1%;margin-right: 5%;float:right">Add New Persona</a>
+            <!-- <input type="button" class="waves-input-wrapper waves-button-input waves-effect newPersona"
+                value="Add New Persona" style="padding: 1%;margin: 1%;margin-right: 5%;float:right"> -->
+        </div>
+        <table id="personaTbl">
+            <tr>
+                <th style="text-align: left;">Persona No.</th>
+                <th style="text-align: left;">Fullname</th>
+                <th style="text-align: left;">URL</th>
+                <th style="text-align: left;">Action</th>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Persona No.</td>
+                <td style="text-align: left;">Fullname</td>
+                <td style="text-align: left;">URL</td>
+                <td style="text-align: left;"><button>EDIT</button></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Persona No.1</td>
+                <td style="text-align: left;">Fullname1</td>
+                <td style="text-align: left;">URL1</td>
+                <td style="text-align: left;"><button>EDIT</button></td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>

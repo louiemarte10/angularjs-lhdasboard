@@ -1,0 +1,35 @@
+/* Styles go here */
+
+.ngcomplete-holder {
+    position: relative;
+}
+
+.ngcomplete-dropdown {
+    list-style-type: none;
+    border-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2px;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    background-color: #ffffff;
+    margin-top:0px;
+
+}
+
+.ngcompleterow {
+   color: #000000;
+   padding: 2px;
+}
+
+.ngcompleterowactive{
+  background-color:#336699;
+  color:#ffffff;
+  transition-property: top, left;
+  transition-duration: 2s, 1s;
+  transition-delay: 0s, 0.5s;
+}
+.highlighted{
+  font-weight:bold;
+}

@@ -1,0 +1,13 @@
+{
+    "add-user": {
+        "url": "/add-user",
+        "templateUrl": "templates/xxx.html"
+    },
+ 
+    "reports": {
+        "url": "/reports",
+        "templateUrl": "includes/reports/index.html"
+    }
+ 
+    
+}
